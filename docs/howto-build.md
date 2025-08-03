@@ -95,9 +95,9 @@ export RELEASE_VERSION="${version}"
 ```
 
 To go further, you should look at how we build it:
-- Linux: https://github.com/VSCodium/vscodium/blob/master/.github/workflows/stable-linux.yml
-- macOS: https://github.com/VSCodium/vscodium/blob/master/.github/workflows/stable-macos.yml
-- Windows: https://github.com/VSCodium/vscodium/blob/master/.github/workflows/stable-windows.yml
+- Linux: https://github.com/Gringo2/VScodium/blob/master/.github/workflows/stable-linux.yml
+- macOS: https://github.com/Gringo2/VScodium/blob/master/.github/workflows/stable-macos.yml
+- Windows: https://github.com/Gringo2/VScodium/blob/master/.github/workflows/stable-windows.yml
 
 The `./dev/build.sh` script is for development purpose and must be avoided for a packaging purpose.
 

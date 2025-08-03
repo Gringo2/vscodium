@@ -45,6 +45,6 @@ Here are some essential keyboard shortcuts to get you started:
 
 Once you're comfortable with the basics, you might want to:
 
-- Explore the [documentation](https://github.com/VSCodium/vscodium/blob/master/docs/index.md) for more details
-- Join the [community](https://github.com/VSCodium/vscodium/discussions) to ask questions and share tips
-- Contribute to the [project](https://github.com/VSCodium/vscodium/blob/master/CONTRIBUTING.md) if you're interested
+- Explore the [documentation](https://github.com/Gringo2/VScodium/blob/master/docs/index.md) for more details
+- Join the [community](https://github.com/Gringo2/VScodium/discussions) to ask questions and share tips
+- Contribute to the [project](https://github.com/Gringo2/VScodium/blob/master/CONTRIBUTING.md) if you're interested
