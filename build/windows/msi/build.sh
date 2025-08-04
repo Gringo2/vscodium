@@ -10,8 +10,8 @@ WIN_SDK_MAJOR_VERSION="10"
 WIN_SDK_FULL_VERSION="10.0.17763.0"
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  PRODUCT_NAME="VSCodium - Insiders"
-  PRODUCT_CODE="VSCodiumInsiders"
+  PRODUCT_NAME="CodeSphere - Insiders"
+  PRODUCT_CODE="CodeSphereInsiders"
   PRODUCT_UPGRADE_CODE="1C9B7195-5A9A-43B3-B4BD-583E20498467"
   ICON_DIR="..\\..\\..\\src\\insider\\resources\\win32"
   SETUP_RESOURCES_DIR=".\\resources\\insider"
@@ -35,9 +35,9 @@ LICENSE_DIR="..\\..\\..\\vscode"
 PROGRAM_FILES_86=$( env | sed -n 's/^ProgramFiles(x86)=//p' )
 
 if [[ -z "${1}" ]]; then
-	OUTPUT_BASE_FILENAME="VSCodium-${VSCODE_ARCH}-${RELEASE_VERSION}"
+	OUTPUT_BASE_FILENAME="CodeSphere-${VSCODE_ARCH}-${RELEASE_VERSION}"
 else
-	OUTPUT_BASE_FILENAME="VSCodium-${VSCODE_ARCH}-${1}-${RELEASE_VERSION}"
+	OUTPUT_BASE_FILENAME="CodeSphere-${VSCODE_ARCH}-${1}-${RELEASE_VERSION}"
 fi
 
 if [[ "${VSCODE_ARCH}" == "ia32" ]]; then

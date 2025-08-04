@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shell Scripts Overview - codesphere Project</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; background: #fafbfc; color: #222; }
+    h1 { color: #2c3e50; }
+    h2 { color: #2980b9; margin-top: 2em; }
+    .script-list { margin: 0; padding: 0; list-style: none; }
+    .script-list li { margin-bottom: 1.5em; }
+    .script-name { font-weight: bold; font-size: 1.1em; color: #34495e; }
+    .script-desc { margin: 0.2em 0 0.5em 1.5em; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Shell Scripts Overview</h1>
+  <p>This document summarizes the purpose of each <code>.sh</code> script in the <strong>codesphere</strong> project.</p>
+  <ul class="script-list">
+    <li>
+      <span class="script-name">build_cli.sh</span>
+      <div class="script-desc">Builds the VS Code CLI (command-line interface) for different platforms, handling platform-specific build steps, OpenSSL setup, and Rust-based CLI compilation.</div>
+    </li>
+    <li>
+      <span class="script-name">prepare_vscode.sh</span>
+      <div class="script-desc">Prepares the VS Code source for building: copies configs, applies patches, updates settings (e.g., disables telemetry), modifies branding, and installs dependencies.</div>
+    </li>
+    <li>
+      <span class="script-name">utils.sh</span>
+      <div class="script-desc">Contains utility functions for patching, text replacement, and environment checks, used by other scripts.</div>
+    </li>
+    <li>
+      <span class="script-name">version.sh</span>
+      <div class="script-desc">Calculates and exports a build source version hash for versioning and reproducibility.</div>
+    </li>
+    <li>
+      <span class="script-name">update_version.sh</span>
+      <div class="script-desc">Updates the version JSON for release tracking, generates artifact metadata, and pushes updates to the versions repository.</div>
+    </li>
+    <li>
+      <span class="script-name">update_upstream.sh</span>
+      <div class="script-desc">Updates upstream commit/tag info in <code>upstream/</code> and pushes changes if needed.</div>
+    </li>
+    <li>
+      <span class="script-name">update_settings.sh</span>
+      <div class="script-desc">Updates VS Code source settings to disable telemetry and crash reporting.</div>
+    </li>
+    <li>
+      <span class="script-name">undo_telemetry.sh</span>
+      <div class="script-desc">Searches for Microsoft telemetry endpoints and replaces them with dummy addresses to ensure telemetry is disabled.</div>
+    </li>
+    <li>
+      <span class="script-name">release.sh</span>
+      <div class="script-desc">Handles creation and updating of GitHub releases, uploading build artifacts and checksums, with error handling and retries.</div>
+    </li>
+    <li>
+      <span class="script-name">prepare_src.sh</span>
+      <div class="script-desc">Archives the current source code into <code>.tar.gz</code> and <code>.zip</code> files and generates checksums.</div>
+    </li>
+    <li>
+      <span class="script-name">prepare_checksums.sh</span>
+      <div class="script-desc">Calculates and stores SHA1 and SHA256 checksums for all files in the <code>assets</code> directory.</div>
+    </li>
+    <li>
+      <span class="script-name">prepare_assets.sh</span>
+      <div class="script-desc">Prepares and signs build artifacts for all platforms, handles notarization/code signing, packages outputs, and generates checksums.</div>
+    </li>
+    <li>
+      <span class="script-name">install_gh.sh</span>
+      <div class="script-desc">Installs the GitHub CLI (<code>gh</code>) tool by downloading and extracting the latest release.</div>
+    </li>
+    <li>
+      <span class="script-name">get_repo.sh</span>
+      <div class="script-desc">Determines the correct VS Code commit/tag, clones the repo, and sets up versioning environment variables.</div>
+    </li>
+    <li>
+      <span class="script-name">get_pr.sh</span>
+      <div class="script-desc">Fetches and checks out a pull request branch for CI testing/building.</div>
+    </li>
+    <li>
+      <span class="script-name">check_cron_or_pr.sh</span>
+      <div class="script-desc">Detects the CI trigger type (PR, push, dispatch, cron) and sets build/deploy environment variables accordingly.</div>
+    </li>
+    <li>
+      <span class="script-name">check_tags.sh</span>
+      <div class="script-desc">Checks if a new build is needed by comparing tags/releases, sets variables for which artifacts to build, and handles all supported platforms/architectures.</div>
+    </li>
+    <li>
+      <span class="script-name">build.sh</span>
+      <div class="script-desc">Main build orchestrator: prepares source, compiles, runs platform-specific build steps, and handles packaging/minification for all build types.</div>
+    </li>
+  </ul>
+</body>
+</html>
