@@ -26,7 +26,7 @@ on:
 
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  APP_NAME: VSCodium
+  APP_NAME: codesphere
   ASSETS_REPOSITORY: ${{ github.repository }}
   BINARY_NAME: codium
   DISABLE_UPDATE: 'yes'
@@ -64,7 +64,7 @@ jobs:
           GENERATE_ASSETS: ${{ github.event.inputs.generate_assets }}
         run: ./check_cron_or_pr.sh
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing codesphere tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ALL: 'yes'
@@ -157,27 +157,27 @@ jobs:
         - slug: X64
           vscode_arch: x64
           npm_arch: x64
-          image: Gringo2/VScodium-linux-build-agent:focal-x64
+          image: Gringo2/codesphere-linux-build-agent:focal-x64
         - slug: ARM64
           vscode_arch: arm64
           npm_arch: arm64
-          image: Gringo2/VScodium-linux-build-agent:focal-arm64
+          image: Gringo2/codesphere-linux-build-agent:focal-arm64
         - slug: ARM32
           vscode_arch: armhf
           npm_arch: arm
-          image: Gringo2/VScodium-linux-build-agent:focal-armhf
+          image: Gringo2/codesphere-linux-build-agent:focal-armhf
         - slug: RISCV64
           vscode_arch: riscv64
           npm_arch: riscv64
-          image: Gringo2/VScodium-linux-build-agent:focal-riscv64
+          image: Gringo2/codesphere-linux-build-agent:focal-riscv64
         - slug: LOONG64
           vscode_arch: loong64
           npm_arch: loong64
-          image: Gringo2/VScodium-linux-build-agent:beige-loong64
+          image: Gringo2/codesphere-linux-build-agent:beige-loong64
         - slug: PPC64
           vscode_arch: ppc64le
           npm_arch: ppc64
-          image: Gringo2/VScodium-linux-build-agent:focal-ppc64le
+          image: Gringo2/codesphere-linux-build-agent:focal-ppc64le
     container:
       image: ${{ matrix.image }}
     env:
@@ -210,7 +210,7 @@ jobs:
         run: ./install_gh.sh
         if: env.DISABLED != 'yes' && env.SHOULD_BUILD == 'yes' && env.SHOULD_DEPLOY == 'yes'
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing codesphere tags/releases
         env:
           CHECK_REH: 'no'
           DISABLE_APPIMAGE: ${{ vars.DISABLE_STABLE_APPIMAGE }}
@@ -348,7 +348,7 @@ jobs:
         run: ./install_gh.sh
         if: env.DISABLED != 'yes' && env.SHOULD_DEPLOY == 'yes'
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing codesphere tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ONLY_REH: 'yes'
@@ -430,7 +430,7 @@ jobs:
         run: ./install_gh.sh
         if: env.SHOULD_DEPLOY == 'yes'
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing codesphere tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ONLY_REH: 'yes'
@@ -477,9 +477,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - package_name: vscodium
+        - package_name: codesphere
           package_type: stable
-        # - package_name: vscodium-git
+        # - package_name: codesphere-git
         #   package_type: rolling
     if: needs.check.outputs.SHOULD_DEPLOY == 'yes'
 
@@ -584,5 +584,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.STRONGER_GITHUB_TOKEN }}
-          repository: VSCodium/repositories-linux
+          repository: codesphere/repositories-linux
           event-type: deploy

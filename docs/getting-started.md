@@ -1,8 +1,8 @@
 <!-- order: 5 -->
 
-# Getting Started with VSCodium
+# Getting Started with codesphere
 
-This guide will help you get started with VSCodium.
+This guide will help you get started with codesphere.
 
 ## Table of Contents
 
@@ -14,11 +14,11 @@ This guide will help you get started with VSCodium.
 
 ## <a id="installation"></a>Installation
 
-VSCodium can be installed on Windows, macOS, and Linux. Visit the [download page](https://vscodium.com/#install) for installation instructions.
+codesphere can be installed on Windows, macOS, and Linux. Visit the [download page](https://codesphere.com/#install) for installation instructions.
 
 ## <a id="first-steps"></a>First Steps
 
-After installing VSCodium, here are some first steps to get started:
+After installing codesphere, here are some first steps to get started:
 
 1. **Open a folder**: Use File > Open Folder to open your project
 2. **Install extensions**: Click on the Extensions icon in the sidebar to browse and install extensions
@@ -26,7 +26,7 @@ After installing VSCodium, here are some first steps to get started:
 
 ## <a id="basic-usage"></a>Basic Usage
 
-VSCodium works just like Visual Studio Code, with a few differences:
+codesphere works just like Visual Studio Code, with a few differences:
 
 - It uses Open VSX for extensions by default instead of the Visual Studio Marketplace
 - It doesn't include Microsoft telemetry or branding
@@ -45,6 +45,6 @@ Here are some essential keyboard shortcuts to get you started:
 
 Once you're comfortable with the basics, you might want to:
 
-- Explore the [documentation](https://github.com/Gringo2/VScodium/blob/master/docs/index.md) for more details
-- Join the [community](https://github.com/Gringo2/VScodium/discussions) to ask questions and share tips
-- Contribute to the [project](https://github.com/Gringo2/VScodium/blob/master/CONTRIBUTING.md) if you're interested
+- Explore the [documentation](https://github.com/Gringo2/codesphere/blob/master/docs/index.md) for more details
+- Join the [community](https://github.com/Gringo2/codesphere/discussions) to ask questions and share tips
+- Contribute to the [project](https://github.com/Gringo2/codesphere/blob/master/CONTRIBUTING.md) if you're interested

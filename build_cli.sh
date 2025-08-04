@@ -7,12 +7,12 @@ cd cli
 export CARGO_NET_GIT_FETCH_WITH_CLI="true"
 export VSCODE_CLI_APP_NAME="$( echo "${APP_NAME}" | awk '{print tolower($0)}' )"
 export VSCODE_CLI_BINARY_NAME="$( node -p "require(\"../product.json\").serverApplicationName" )"
-export VSCODE_CLI_UPDATE_ENDPOINT="https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master"
+export VSCODE_CLI_UPDATE_ENDPOINT="https://raw.githubusercontent.com/codesphere/versions/refs/heads/master"
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  export VSCODE_CLI_DOWNLOAD_ENDPOINT="https://github.com/Gringo2/VScodium-insiders/releases"
+  export VSCODE_CLI_DOWNLOAD_ENDPOINT="https://github.com/Gringo2/codesphere-insiders/releases"
 else
-  export VSCODE_CLI_DOWNLOAD_ENDPOINT="https://github.com/Gringo2/VScodium/releases"
+  export VSCODE_CLI_DOWNLOAD_ENDPOINT="https://github.com/Gringo2/codesphere/releases"
 fi
 
 TUNNEL_APPLICATION_NAME="$( node -p "require(\"../product.json\").tunnelApplicationName" )"

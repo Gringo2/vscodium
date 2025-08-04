@@ -2,9 +2,9 @@
 
 APP_NAME="${APP_NAME:-CodeSphere}"
 APP_NAME_LC="$( echo "${APP_NAME}" | awk '{print tolower($0)}' )"
-ASSETS_REPOSITORY="${ASSETS_REPOSITORY:-Gringo2/VScodium}"
+ASSETS_REPOSITORY="${ASSETS_REPOSITORY:-Gringo2/codesphere}"
 BINARY_NAME="${BINARY_NAME:-codium}"
-GH_REPO_PATH="${GH_REPO_PATH:-Gringo2/VScodium}"
+GH_REPO_PATH="${GH_REPO_PATH:-Gringo2/codesphere}"
 ORG_NAME="${ORG_NAME:-Adulis INC}"
 
 # All common functions can be added to this file

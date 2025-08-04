@@ -2,22 +2,22 @@
 
 # Getting all the Telemetry Out
 
-This page explains how VSCodium handles telemetry and how to ensure your privacy.
+This page explains how codesphere handles telemetry and how to ensure your privacy.
 
 ## Table of Contents
 
-- [Telemetry in VSCodium](#telemetry)
+- [Telemetry in codesphere](#telemetry)
 - [Replacements to Microsoft Online Services](#replacements)
 - [Checking for Telemetry](#checking)
 - [Additional Privacy Settings](#additional-settings)
-- [VSCodium Announcements](#announcements)
+- [codesphere Announcements](#announcements)
 - [Malicious & Deprecated Extensions](#malicious-extensions)
 
-## <a id="telemetry"></a>Telemetry in VSCodium
+## <a id="telemetry"></a>Telemetry in codesphere
 
 Even though we do not pass the telemetry build flags (and go out of our way to cripple the baked-in telemetry), Microsoft will still track usage by default.
 
-We do however set the default `telemetry.enableTelemetry` and `telemetry.enableCrashReporter` values to `false`. You can see those by viewing your VSCodium `settings.json` and searching for `telemetry`.
+We do however set the default `telemetry.enableTelemetry` and `telemetry.enableCrashReporter` values to `false`. You can see those by viewing your codesphere `settings.json` and searching for `telemetry`.
 
 It is also highly recommended that you review all the settings that "use online services" by following [these instructions](https://code.visualstudio.com/docs/getstarted/telemetry#_managing-online-services). The `@tag:usesOnlineServices` filter on the settings page will show that by default:
 
@@ -31,9 +31,9 @@ __Please note that some extensions send telemetry data to Microsoft as well. We 
 
 ## <a id="replacements"></a>Replacements to Microsoft Online Services
 
-When searching the `@tag:usesOnlineServices` filter, note that while the "Update: Mode" setting description still says "The updates are fetched from a Microsoft online service", VSCodium's build script [sets the `updateUrl` field](https://github.com/Gringo2/VScodium/blob/master/prepare_vscode.sh#L135) in `product.json` directly to the GitHub page, so enabling that setting won't actually result in any calls to Microsoft online service.
+When searching the `@tag:usesOnlineServices` filter, note that while the "Update: Mode" setting description still says "The updates are fetched from a Microsoft online service", codesphere's build script [sets the `updateUrl` field](https://github.com/Gringo2/codesphere/blob/master/prepare_vscode.sh#L135) in `product.json` directly to the GitHub page, so enabling that setting won't actually result in any calls to Microsoft online service.
 
-Likewise, while the descriptions for "Extensions: Auto Check Updates" and "Extensions: Auto Update" include the same phrase, VSCodium [replaces](https://github.com/Gringo2/VScodium/blob/master/prepare_vscode.sh#L121) the Visual Studio Marketplace with Open VSX, so these settings won't call Microsoft, either.
+Likewise, while the descriptions for "Extensions: Auto Check Updates" and "Extensions: Auto Update" include the same phrase, codesphere [replaces](https://github.com/Gringo2/codesphere/blob/master/prepare_vscode.sh#L121) the Visual Studio Marketplace with Open VSX, so these settings won't call Microsoft, either.
 
 ## <a id="checking"></a>Checking for Telemetry
 
@@ -63,9 +63,9 @@ For maximum privacy, you can add these settings to your `settings.json`:
 
 These settings will disable various telemetry and tracking features.
 
-## <a id="announcements"></a>VSCodium Announcements
+## <a id="announcements"></a>codesphere Announcements
 
-The Welcome page in VSCodium displays announcements that are fetched from the project's GitHub repository.
+The Welcome page in codesphere displays announcements that are fetched from the project's GitHub repository.
 
 If you prefer to disable this feature, you can set the `workbench.welcomePage.extraAnnouncements` setting to `false` in your `settings.json`.
 
