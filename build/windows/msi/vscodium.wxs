@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
   <?include $(sys.CURRENTDIR)includes\codesphere-variables.wxi ?>
+  <?include $(sys.CURRENTDIR)includes\codesphere-variables.wxi ?>
 
   <Product Id="$(var.ProductId)" Name="$(var.ProductNameWithVersion)" Language="$(var.ProductLanguage)" Version="$(var.ProductVersion)" Manufacturer="$(var.ProductManufacturerLong)" UpgradeCode="$(var.ProductUpgradeCode)">
     <Package Description="!(loc.PackageDescription)" Manufacturer="$(var.ProductManufacturerLong)" InstallerVersion="200" Compressed="yes" />
@@ -39,6 +40,7 @@
       <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
       <!--
         In general it seems very hard to track what files may have changed
+        between codesphere versions. As files are crawled with heat and GUIDs
         between codesphere versions. As files are crawled with heat and GUIDs
         are automatically generated some MSI "optimization" features are not
         available. But no real problem, it only takes some more seconds to

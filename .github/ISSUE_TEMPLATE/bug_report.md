@@ -10,11 +10,11 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
-**Please confirm that this problem is VSCodium-specific**
-- [ ] This bug doesn't happen if I use Microsoft's Visual Studio Code. It only happens in VSCodium.
+**Please confirm that this problem is codesphere-specific**
+- [ ] This bug doesn't happen if I use Microsoft's Visual Studio Code. It only happens in codesphere.
 
 **Please confirm that the issue/resolution isn't already documented**
-- [ ] I checked [the Docs page](https://github.com/Gringo2/VScodium/blob/master/docs/index.md) and [the Troubleshooting page](https://github.com/Gringo2/VScodium/blob/master/docs/troubleshooting.md) and my issue is not mentioned there.
+- [ ] I checked [the Docs page](https://github.com/Gringo2/codesphere/blob/master/docs/index.md) and [the Troubleshooting page](https://github.com/Gringo2/codesphere/blob/master/docs/troubleshooting.md) and my issue is not mentioned there.
 
 **To Reproduce**
 Steps to reproduce the behavior:
